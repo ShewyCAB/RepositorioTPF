@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="../style/galeria.css">
+    <script src="../Js/galeria.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<nav id="navegacion">
+    <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li>
+            <div class="boton" id="botonConsulta">
+                <button id="abrirModal">Consulta</button>
+                <dialog id="modal">
+                    <form method="dialog">
+
+                        <div id="contenedor">
+                            <div id="consulta">
+                                <h1 id="titulo">Consulta</h1>
+                                <div class="datos" id="name">
+                                    <i class="fa-solid fa-user"></i>
+                                    <input type="text" placeholder="Nombre">
+                                </div>
+                                <div class="datos" id="email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <input type="email" placeholder="Email">
+                                </div>
+                                <div class="datos" id="tel">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <input type="text" placeholder="Numero de telefono">
+                                </div> 
+                                <div class="texto">
+                                    <input id="cuadro" type="text" placeholder="Ingrese su consulta"">
+                                </div>
+                                
+                                <div class="boton" id="boton">
+                                    <button id="enviar" type="button">Enviar consulta</button>
+                                </div>
+    
+                                <div id="mensaje">
+                                </div>
+                                <button class="boton" id="cerrarModal">Cerrar Consulta</button>
+                                
+                            </div>
+                        </div>
+                    </form>
+                </dialog>
+            </div>
+        </li>
+                
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="">Redes</a>
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/seba.larrah/"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/Sebal_cab"><i class="fa-brands fa-twitter"></i>Twitter</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/smlarrahona/"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<body>
+    <div id="contImg"> 
+        <div class="fullImg" id="fullImgBox">
+            <img class="imagen" id="fullImg" src="" alt="">
+            <span onclick="closeImg()">x</span>
+        </div>
+        <h1>Galeria</h1>
+        <div id="pack1" class="pack">
+            <img id="img1" class="imagen" src="../multimedia/img/pack1/23 (13 de 33).webp" alt="" onclick="openImg(this.src)">
+            <img id="img2" class="imagen" src="../multimedia/img/pack1/23 (25 de 33)-1.webp" alt="" onclick="openImg(this.src)">
+            <img id="img3" class="imagen" src="../multimedia/img/pack1/23 (26 de 33).webp" alt="" onclick="openImg(this.src)">
+            <img id="img4" class="imagen" src="../multimedia/img/pack1/23 (8 de 33).webp" alt="" onclick="openImg(this.src)">
+
+        </div>
+        <div id="pack2" class="pack">
+            <img id="img5" class="imagen" src="../multimedia/img/pack2/1234 (1 de 1).webp" alt="" onclick="openImg(this.src)">
+            <img id="img6" class="imagen" src="../multimedia/img/pack2/ASF (30 de 42).webp" alt="" onclick="openImg(this.src)">
+            <img id="img7" class="imagen" src="../multimedia/img/pack2/ASF (31 de 42).webp" alt="" onclick="openImg(this.src)">
+            <img id="img8" class="imagen" src="../multimedia/img/pack2/ASF (38 de 42).webp" alt="" onclick="openImg(this.src)">
+
+        </div>
+    </div>
+</body>
+</html>

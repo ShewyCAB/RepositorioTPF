@@ -6,7 +6,13 @@ body {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
+    align-content: center;
     flex-flow: column;
+    background-color: rgb(47, 48, 61);
+    background-image: url("../multimedia/img/23\ \(4\ de\ 33\).webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
@@ -178,147 +184,139 @@ nav .datos i {
 
 
 
-
-
-
-
-
-#seccionUno{  
-    background-image: url(../multimedia/img/23\ \(4\ de\ 33\).webp);
-    background-size: cover;
-    padding: 100px;
-    height: 700px;
-    font-size: x-large;
-    position: sticky;
-}
-
-#seccionUno .cuerpo {
-    background-color: rgba(0, 0, 0, 0.103);
-    padding: 30px;
-    border-radius: 20px;
-    transition: 0.5s;
-    text-align: center;
-}
-
-#seccionUno .cuerpo:hover {
-    background-color: rgba(0, 0, 0, 0.336);
-    padding: 30px;
-    border-radius: 30px;
-}
-
-#seccionDos {
-    padding-top: 70px;
-    padding-bottom: 70px;
-    border-top: solid 1px aliceblue;
-    border-bottom: solid 1px aliceblue;
-    background-color: rgb(47, 48, 61);
-}
-
-.seccion {
-    color: aliceblue;
+#cajaDatos{
     display: flex;
+    justify-content: center;
+    margin: 15%;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.342);
+    color: aliceblue;
+    transition: 0.5s;
+    border-radius: 20px;
     flex-flow: column;
-    justify-content: center;
-    border-bottom: solid 1px aliceblue;
+    text-align: center;
+    align-items: center;
 }
 
-#serv {
-    display: flex;
-    margin-top: 80px;
-    margin-left: 80px;
-    margin-right: 80px;
-    height: auto;
-    justify-content: center;
-    flex-wrap: nowrap;
-    flex-flow: row;
-    border-radius: 20px;
-    transition: 0.5s;
-    color: aliceblue;
-}
-
-
-
-
-
-.caja{
-    justify-content: center;
-    width: 0;
-    color: aliceblue;
-    line-height: 3;
-    transition: 0.5s ease;
-    z-index: 0;
-    flex-grow: 1;
-    opacity: 0.9; 
-    border-radius: 20px;
+#cajaDatos:hover {
     background-color: rgba(0, 0, 0, 0.664);
 }
 
-.caja:hover {
-    width: 10%;
-    background-color: aliceblue;
-    color: black;
-    position: sticky;
-    z-index: 1;
-    opacity: 1;
-    cursor:pointer;
-    border-radius: 20px;
+#cajaDatos .datos {
+    margin: 5px;
+    line-height: 1.5;
 }
 
-
-
-
-
-h1, h2{
-    text-align: center;
+#cajaDatos h3{
+    font-size: small;
+    padding-bottom: 10px;
+    border-bottom: solid 1px white;
+    margin-bottom: 10px;
 }
 
-
-
-#descripcion1 ul, #descripcion2 ul, #descripcion3 ul {
-    list-style-type: none;
-    transition: maxHeight 0.5s ease;
-    padding: 10px;
-    font-size: 12px;
+#cajaDatos img{
+    max-width: 300px;
+    max-height: 300px;
+    margin: 50px;
+    margin-top: 0;
+    border-radius: 500px;
+    transform: scale(1);
+    transition: 0.5s ease;
 }
 
-
-#imagen {
-    margin: 0;
+#cajaDatos img:hover {
+    transform: scale(1.2);
+    
 }
 
-#imagen img{
-    max-width: 100%;
-    height: auto;
-    margin: 0;
-    object-fit: cover;
-}
-
-
-footer {
-    text-align: center;
+#cajaTarjeta {
+    display: flex;
+    margin: 15%;
+    margin-top: 10px;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.342);
     color: aliceblue;
-    background-color: black;
-    height: 300px;
-    padding: 30px;
+    transition: 0.5s;
+    border-radius: 20px;
+    flex-flow: column;
+    text-align: center;
+}
+
+#cajaTarjeta:hover {
+    background-color: rgba(0, 0, 0, 0.664);
+}
+
+#cajaTarjeta i{
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+#cajaTarjeta p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 15px;
 }
 
 
-#seccionTres {
+#cuerpo {
+    
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-row: 100%;
+}
 
+#cuerpo #principal {
+    grid-column: 1/2;
+    margin: 10px;
 }
 
 
 
+#cuerpo ul {
+    border-left: solid 1px aliceblue;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 10px;
+}
 
 
-
-@media screen and (min-width: 1200px){
-    #serv{
-        padding-left: 100px;
-        padding-right: 100px;
+@media screen and (max-width: 800px){
+    *{
+        font-size: small;
+        margin: 0;
+        padding: 0;
     }
 
+    nav button {
+        font-size: small;
+    }
+
+    #cajaDatos {
+        margin: 5%;
+        margin-top: 150px;
+    }
+
+    #cajaTarjeta {
+        margin: 5%;
+        margin-top: 10px;
+        flex-flow: column;
+    }
+
+
+    #cajaDatos img {
+        margin: auto;
+    }
+
+    #cajaDatos h1 {
+        font-size: x-large;
+    }
 }
+
+
+
 
 @media screen and (max-width: 1300px){
     dialog {
@@ -334,71 +332,7 @@ footer {
         color: aliceblue;
     
     }
-    
-}
-
-
-@media screen and (max-width: 800px){
-    html{
-        font-size: small;
-    }
 
     
 
-    #serv{
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .caja {
-        width: 100%;
-        height: 800px;
-    }
-
-    .caja:hover {
-        width: 100%;
-        background-color: aliceblue;
-        color: black;
-        position: sticky;
-        z-index: 1;
-        opacity: 1;
-    }
-
-    #imagen img{
-        max-height: 100%;
-        width: auto;
-        
-    }
-
-    nav button {
-        font-size: small;
-    }
-
-    #descripcion1 ul, #descripcion2 ul, #descripcion3 ul {
-        list-style-type: none;
-        transition: maxHeight 0.5s ease;
-        padding: 3px;
-        font-size: 12px;
-    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
