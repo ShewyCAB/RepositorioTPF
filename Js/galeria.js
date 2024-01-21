@@ -6,18 +6,23 @@ const botonAbrirModal = document.getElementById("abrirModal");
 const modal = document.getElementById("modal");
 
 
-modal.style.transition = "0.5s";
+
 
 botonAbrirModal.addEventListener("click", ()=>{
     modal.showModal();
     submit.onclick = function () {
         let usuario = user.value;
         let correo = email.value;
-        let contra = password.value;
-        
-        alert(`${usuario} ha sido registrado correctamente.`)
-        
+        let contra = password.value; 
+        let datos = [
+            usuario,
+            correo,
+            contra
+        ]
+        localStorage.setItem("datos", JSON.stringify(datos));
+        alert(`${datos[1]} ha sido registrado correctamente.`)
     }
+    return datos;
 })
 
 
