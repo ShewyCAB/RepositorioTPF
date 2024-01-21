@@ -12,6 +12,8 @@ descrp2.style.maxHeight = "0";
 descrp3.style.maxHeight = "0";
 
 
+
+
 botonActv1.onclick = function() {
     if(band1 == false) {
         descrp1.style.maxHeight = "400px";
@@ -63,20 +65,7 @@ botonActv3.onclick = function() {
     }
 }
 
-let boton = document.getElementById("boton");
-let mensaje = document.getElementById("mensaje");
-mensaje.style.maxHeight = "0";
 
-
-
-boton.onclick = function() {
-    mensaje.style.maxHeight = "200px"
-    mensaje.innerHTML = `
-    <p>Le enviamos un mail, por favor revise su correo.</p>
-    `;
-    mensaje.style.transition = "max-height 0.5s";
-    
-}
 
 
 
@@ -85,16 +74,83 @@ const botonAbrirModal = document.getElementById("abrirModal");
 const botonCerrarModal = document.getElementById("cerrarModal");
 
 const modal = document.getElementById("modal");
-modal.style.transition = "1s";
-botonAbrirModal.style.transition = "1s";
-botonCerrarModal.style.transition = "1s";
+
+
 
 botonAbrirModal.addEventListener("click", ()=>{
     modal.showModal();
-    
+    submit.onclick = function () {
+        let usuario = user.value;
+        let correo = email.value;
+        let contra = password.value;
+        
+        alert(`${usuario} ha sido registrado correctamente.`)
+        
+    }
 })
 
-botonCerrarModal.addEventListener("click", ()=>{
-    modal.close();
+
+
+
+
+let signUp = document.getElementById("signUp");
+let signIn = document.getElementById("signIn");
+let nameInput = document.getElementById("nameInput")
+let title = document.getElementById("title");
+let submit = document.getElementById("submit");
+
+let user = document.getElementById("user");
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+let cartOlv = document.getElementById("olv");
+
+
+
+
+signUp.onclick = function() {
+    nameInput.style.maxHeight = "60px";
+    title.innerHTML = "Registro";
+    cartOlv.innerHTML = `
+    `;
+    signUp.classList.remove("disable");
+    signIn.classList.add("disable");
+    submit.onclick = function () {
+        let usuario = user.value;
+        let correo = email.value;
+        let contra = password.value;
+        let datos = [
+            usuario,
+            correo,
+            contra
+        ]
+        localStorage.setItem("datos", JSON.stringify(datos));
+        alert(`${datos[1]} ha sido registrado correctamente.`)
+    }
+    return datos;
+}
+
+signIn.onclick = function() {
+    nameInput.style.maxHeight = "0";
+    cartOlv.style.maxHeight = "60px";
+    cartOlv.innerHTML = `
+    <p>Olvidaste tu contraseña? <a href="#">click aqui</a></p>
+    `;
+    title.innerHTML = "Login";
+    signUp.classList.add("disable");
+    signIn.classList.remove("disable");
+    submit.onclick = function () {
+        let correo = email.value;
+        let contra = password.value;
+        let datos = JSON.parse(localStorage.getItem("datos"));
+        if (datos[1] == correo && datos[2] == contra ) {
+            alert(`${correo} ha iniciado sesion correctamente.`)
+
+        }
+        else{
+            alert(`Usuario o contraseña incorrecta`)
+        }
+    }
     
-})
+}
+
+

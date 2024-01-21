@@ -14,39 +14,50 @@
         <li><a href="../index.html">Inicio</a></li>
         <li>
             <div class="boton" id="botonConsulta">
-                <button id="abrirModal">Consulta</button>
+                <button id="abrirModal">Sesion</button>
                 <dialog id="modal">
                     <form method="dialog">
 
-                        <div id="contenedor">
-                            <div id="consulta">
-                                <h1 id="titulo">Consulta</h1>
-                                <div class="datos" id="name">
-                                    <i class="fa-solid fa-user"></i>
-                                    <input type="text" placeholder="Nombre">
-                                </div>
-                                <div class="datos" id="email">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <input type="email" placeholder="Email">
-                                </div>
-                                <div class="datos" id="tel">
-                                    <i class="fa-solid fa-phone"></i>
-                                    <input type="text" placeholder="Numero de telefono">
-                                </div> 
-                                <div class="texto">
-                                    <input id="cuadro" type="text" placeholder="Ingrese su consulta">
-                                </div>
-                                
-                                <div class="boton" id="boton">
-                                    <button id="enviar" type="button">Enviar consulta</button>
-                                </div>
-    
-                                <div id="mensaje">
-                                </div>
-                                <button class="boton" id="cerrarModal">Cerrar Consulta</button>
-                                
-                            </div>
-                        </div>
+                        <div class="container">
+
+                            <div class="form-content">
+                    
+                                <h1 id="title">Registro</h1>
+                    
+                                    <div class="input-group">
+                    
+                                        <div class="input-field" id="nameInput">
+                    
+                                            <i class="fa-solid fa-user"></i>
+                                            <input type="text" placeholder="Nombre" id="user">
+                    
+                                        </div>
+                                        <div class="input-field">
+                    
+                                            <i class="fa-solid fa-envelope"></i>
+                                            <input type="email" placeholder="Correo" id="email">
+                    
+                                        </div>
+                                        <div class="input-field">
+                    
+                                            <i class="fa-solid fa-lock"></i>
+                                            <input type="password" placeholder="Contraseña" id="password">
+                    
+                                        </div>
+                                        <div id="olv">
+                                            
+                                        </div>
+                    
+                    
+                                    </div>
+                    
+                                    <div class="btn-field">
+                                        <button id="signUp" type="button">Registro</button>
+                                        <button id="signIn" type="button" class="disable">Login</button>
+                                        
+                                    </div>
+                                    <button id="submit" type="button">Enviar</button>
+                        </div>            
                     </form>
                 </dialog>
             </div>
